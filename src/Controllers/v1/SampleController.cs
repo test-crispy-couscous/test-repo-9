@@ -1,9 +1,9 @@
-﻿using AspnetTemplate.Core.Models;
-using AspnetTemplate.Infrastructure;
+﻿using TestRepo9.Core.Models;
+using TestRepo9.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspnetTemplate.Controllers.v1;
+namespace TestRepo9.Controllers.v1;
 
 [ApiVersion("1.0")]
 [ApiController]

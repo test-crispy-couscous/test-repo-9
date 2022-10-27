@@ -1,4 +1,4 @@
-﻿namespace AspnetTemplate.Core.Models;
+﻿namespace TestRepo9.Core.Models;
 
 public class Sample : Entity
 {

@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\AspnetTemplate\AspnetTemplate.csproj" />
+      <ProjectReference Include="..\..\src\TestRepo9\TestRepo9.csproj" />
     </ItemGroup>
 
 </Project>

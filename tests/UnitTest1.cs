@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace AspnetTemplate.Tests;
+namespace TestRepo9.Tests;
 
 public class UnitTest1
 {
