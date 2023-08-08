@@ -12,6 +12,13 @@ variables:
     value: 'Release'
 
 steps:
+- task: JavaToolInstaller@0
+  displayName: 'Use Java 17'
+  inputs:
+    versionSpec: 17
+    jdkArchitectureOption: x64
+    jdkSourceOption: PreInstalled
+
 - script: dotnet tool install --global dotnet-sonarscanner
   displayName: "dotnet-sonarscanner install"
 
