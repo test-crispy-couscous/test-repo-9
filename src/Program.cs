@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var x = "Test";
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApiVersioning();
+builder.Services.AddHealthChecks();
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("AppDbContext")));
 
@@ -25,7 +24,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
+app.MapGet("", () => "Hello");
 app.MapControllers();
+app.MapHealthChecks("/healthz");
+
+app.Logger.LogInformation("Starting");
+await Task.Delay(10_000);
 
 app.Run();
